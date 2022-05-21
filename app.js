@@ -1,13 +1,13 @@
-//   Chapter # 09 ------ 11
+// Chapter # 09 ------ 11 
 
 
 
-//           Question 01
+        //    Question 01 
 
-// var city = prompt("Enter the name of city")
-// if (city == "karachi" || city == "Karachi") {
-//     alert("Welcome to the city of lights")
-// }
+//  var city = prompt("Enter the name of city")
+//  if (city == "karachi" || city == "Karachi") {
+//      alert("Welcome to the city of lights")
+//  }
 
 
 
@@ -465,16 +465,6 @@
 
 
 
-
-
-//      Question 15
-
-// var phone = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"]
-
-// document.write("<select> <option>" + phone[0] + "</option> <option>" + phone[1] + "</option> <option>" + phone[2] + "</option> <option>" + phone[3] + "</option> <option>" + phone[4] + "</option>  <option>" + phone[5] + "</option>   </select>  ")
-
-
-
             //   Chapter # 17 ----  20
 
 
@@ -557,25 +547,6 @@ document.write("<h2>e. Series </h2>")
 for (var i = 0; i <= 20; i = i + 2) {
     document.write(i + "K,")
 }
-
-
-//                Question 08
-
-var A = [24, 53, 78, 91, 12]
-
-console.log("Array items: " + A)
-A = A.sort()
-console.log("The largest number is: " + A[A.length - 1])
-
-
-//              Question 09
-
-
-var b = [24, 53, 78, 91, 12]
-
-console.log("Array items: " + b)
-b = b.sort().reverse()
-console.log("The smallest number is: " + b[b.length - 1])
 
 
 //            Question 10
