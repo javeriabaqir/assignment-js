@@ -1,3 +1,221 @@
+ 
+CHAP31-34
+
+//part1
+var rightNow = new Date();
+document.write(rightNow)
+
+//part2
+var months = ['jan','feb','march','apr','may','june','july','august','sept','oct','nov','dec']
+var newDate = new Date()
+var currentMonth = newDate.getMonth()
+var monthWords = months[currentMonth]
+alert(monthWords)
+
+//part3
+
+var date = new Date();
+var a = date.toString()
+var c = a.slice(0,3)
+document.write(c)
+
+//part4
+var dateToday = new Date();
+var str = dateToday.toString();
+var check = str.slice(0,3)
+if (check ==="sat" || check ==="sun"){
+    alert("Its a funday")
+}
+else{
+    alert("Not a funday")
+}
+
+//part5
+var day = new Date();
+var daysOfMonth = day.getDay()
+if (daysOfMonth< 16){
+    alert("First 15  days of the months")
+}
+
+else{
+    alert("Last days of the month")
+}
+
+//part6
+var today = new Date();
+alert("Current Date:" + " " + today)
+var todayTime = today.getTime();
+alert("Time in Miliseconds:" + " "+ todayTime)
+var minutes = todayTime/(1000*60)
+
+alert("Time in Minutes from jan1 1970: " + " " +  minutes)
+
+
+//part7
+var d = new Date();
+var Hours = d.getHours()
+
+if(Hours < 12){
+    alert("Before Noon AM")
+}
+
+else{
+    alert("PM")
+}
+
+//part8
+var laterDate = new Date("June 30,2020")
+alert("LaterDate:" + " " + laterDate)
+
+
+//part9
+
+var todayDate = new Date()
+var RDate = new Date("June 18,2015")
+var miliseconds = todayDate.getTime()
+var miliseconds2 = RDate.getTime()
+var difference = miliseconds-miliseconds2
+var daysTillRamadan =Math.floor(difference/(1000*60*60*24)) 
+alert("Days passed till 2015 ramadan are" +" " + daysTillRamadan )
+
+//part10
+var refDate = new Date("December 05, 2015 22:50:16")
+var prevDate = new Date("January 01, 2015")
+var refTime = refDate.getTime()
+var prevTime = prevDate.getTime()
+var diffInmili = refDate-prevDate
+var second = Math.ceil(diffInmili/(1000*60))
+alert("The Seconds passed since beginning of 2015 are" + " " + second)
+
+
+//part11
+
+var currentDate = new Date();
+document.write(currentDate)
+var hourAgo=new Date()
+var hours = hourAgo.getHours()
+hourAgo.setHours(hours-1)
+document.write("1 hour ago it was" + " " +hourAgo)
+
+
+Assignments of Chapters 35-38
+// Task 1
+function dateTime () {
+    var date = new Date();
+    document.write(date + "<br>");
+}
+dateTime();
+// Task 2
+function nameGreeter (fname, lname) {
+    document.write("Welcome " + fname + " " + lname + "<br>");
+}
+nameGreeter("Syed Talha", "Askari");
+// Task 3
+function add (num1, num2) {
+    return num1 + num2;
+}
+var num1 = +prompt("Enter First Number: ");
+var num2 = +prompt("Enter Second Number: ");
+var sum = add(num1, num2);
+document.write("Sum of " + num1 + " and " + num2 + " is " + sum + "<br>");
+// Task 4
+function calc (num1, num2, op) {
+    switch(op) {
+        case "+":
+            return num1 + num2;
+        case "-":
+            return num1 - num2;
+        case "*":
+            return num1 * num2;
+        case "/":
+            var div = num1 / num2;
+            return div.toFixed(2);
+        case "%":
+            return num1 % num2;
+        default:
+            return 0;
+    }
+}
+alert("Options:\n +. Addition\n -. Subtraction\n *. Multiplication\n /. Division\n %. Remainder");
+var num1 = +prompt("Enter First Number: ");
+var num2 = +prompt("Enter Second Number: ");
+var op = prompt("Enter Operator: ");
+var ans = calc(num1, num2, op);
+if (ans === 0) {
+    document.write("Invalid<br>");
+}
+else {
+    document.write(num1 + " " + op + " " + num2 + " " + " = " + ans + "<br>");
+}
+// Task 5
+function square(num) {
+    return num * num;
+}
+var num = +prompt("Enter Number: ");
+var sqr = square(num);
+document.write("Square of " + num + " is " + sqr + "<br>");
+// Task 6
+function fact(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    }
+    else if (n < 0) {
+        return -1;
+    }
+    else  {
+        return n * fact(n - 1);
+    }
+}
+var n = +prompt("Enter Number: ");
+var f = fact(n);
+if (f === -1) {
+    document.write("Negative Number Factorials are not possible<br>");
+}
+else {
+    document.write("Factorial of " + n + " is " + f + "<br>");
+}
+// Task 7
+function count(start, end) {
+    for (start; start <= end; start++) {
+        document.write(start + "<br>");
+    }
+}
+var start = +prompt("Enter starting number: ");
+var end = +prompt("Enter ending number: ");
+count(start, end);
+// Task 8
+function calculateSquare(num) {
+    return num * num;
+}
+function calculateHypotenuse(base, perpendicular) {
+    return Math.sqrt(calculateSquare(base) + calculateSquare(perpendicular)).toFixed(2);
+}
+var base = +prompt("Enter Base: ");
+var perpendicular = +prompt("Enter Perpendicular: ");
+document.write("Hypotenuse of Base: " + base + " and " + perpendicular + " is " + calculateHypotenuse(base, perpendicular) + "<br>");
+// Task 9
+function area(width, height) {
+    return width * height;
+}
+var height = +prompt("Enter height: ");
+var A = area(43, height);
+document.write("Area of a triangle of width = 43 and height = " + height + " is " + A + "<br>");
+// Task 10
+function palindrome(str) {
+    var revStr = str.split("").reverse().join("");
+    if (str === revStr) {
+        document.write("Given string \"" + str + "\" is a palindrome<br>");
+    }
+    else {
+        document.write("Given string \"" + str + "\" is not a palindrome<br>");
+    }
+}
+var str = prompt("Enter a phrase: ");
+palindrome(str)
+ 
+ 
+ 
+ 
  //   Chapter # 21 -25
 
 // Task #1
